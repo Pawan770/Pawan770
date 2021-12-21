@@ -37,5 +37,12 @@ public class UserDetailsController {
 	public  UserDetails updateUser(@RequestBody UserDetails user) {
 		return userService.updateUser(user);
 	}
+	/**
+	 * Hi pawan you r learnig git commands today
+	 * read properly
+	 * and correctly
+	 *
+	 *
+	 */
 	
 }
