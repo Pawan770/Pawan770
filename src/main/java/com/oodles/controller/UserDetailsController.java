@@ -25,6 +25,12 @@ public class UserDetailsController {
 	public  List<UserDetails> getUsers() {
 		return userService.getUsers();
     }
+
+	/**git stat
+	 *
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/userByid/{id}")
 	public UserDetails findById(@PathVariable int id) {
 		return userService.getUserById(id);
