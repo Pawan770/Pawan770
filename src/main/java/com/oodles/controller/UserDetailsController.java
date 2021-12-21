@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import com.oodles.model.UserDetails;
 import com.oodles.service.UserDetailsService;
 
-/**
- * hi pawan
- */
 @RestController
 @RequestMapping("/api")
 public class UserDetailsController {
@@ -29,41 +26,18 @@ public class UserDetailsController {
 		return userService.getUsers();
     }
 
-	/**
-	 *
-	 * @param id
-	 * @return
-	 */
 	@GetMapping("/userByid/{id}")
 	public UserDetails findById(@PathVariable int id) {
 		return userService.getUserById(id);
     }
 
-	/**
-	 *
-	 * @param id
-	 * @return
-	 */
 	@DeleteMapping("/delete/{id}")
 	public String deleteuserById( @PathVariable int id) {
 		return userService.deleteuserById(id);
 	}
-
-	/**
-	 *
-	 * @param user
-	 * @return
-	 */
 	@PutMapping("/update")
 	public  UserDetails updateUser(@RequestBody UserDetails user) {
 		return userService.updateUser(user);
 	}
-	/**
-	 * Hi pawan you r learnig git commands today
-	 * read properly
-	 * and correctly
-	 *
-	 *
-	 */
 	
 }
