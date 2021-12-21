@@ -29,7 +29,7 @@ public class UserDetailsController {
 		return userService.getUsers();
     }
 
-	/**git stat
+	/**
 	 *
 	 * @param id
 	 * @return
@@ -38,10 +38,22 @@ public class UserDetailsController {
 	public UserDetails findById(@PathVariable int id) {
 		return userService.getUserById(id);
     }
+
+	/**
+	 *
+	 * @param id
+	 * @return
+	 */
 	@DeleteMapping("/delete/{id}")
 	public String deleteuserById( @PathVariable int id) {
 		return userService.deleteuserById(id);
 	}
+
+	/**
+	 *
+	 * @param user
+	 * @return
+	 */
 	@PutMapping("/update")
 	public  UserDetails updateUser(@RequestBody UserDetails user) {
 		return userService.updateUser(user);
